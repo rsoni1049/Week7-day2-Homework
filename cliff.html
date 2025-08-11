@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majestic Cliff Explorations</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- Sticky Top Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Great Cliff</a>
+                <!-- Hamburger Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i> Menu
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item active" href="index.html">Home</a></li>
+                                <li><a class="dropdown-item" href="cliff.html">Cliffs</a></li>
+                                <li><a class="dropdown-item" href="activities.html">Activities</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card-gallery">
+            <div class="container">
+                <h3>Our Cliff Collection</h3>
+                <div class="gallery-grid">
+                    <div class="cliff-card north">
+                        <div class="card-image" style="background-image: url('images/cliff-north-mountain.jpg');"></div>
+                        <div class="card-content">
+                            <h4>Northern Mountain Cliff</h4>
+                            <p>Towering cliffs with majestic mountain vistas stretching as far as the eye can see.</p>
+                            <div class="compass-icon">N</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cliff-card east">
+                        <div class="card-image" style="background-image: url('images/cliff-east-river.jpg');"></div>
+                        <div class="card-content">
+                            <h4>Eastern River Cliff</h4>
+                            <p>Sheer rock faces overlooking winding rivers cutting through valleys below.</p>
+                            <div class="compass-icon">E</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cliff-card forest">
+                        <div class="card-image" style="background-image: url('images/forest_cliff.jpg');"></div>
+                        <div class="card-content">
+                            <h4>Forest Cliff</h4>
+                            <p>Lush greenery meeting vertical rock faces in perfect harmony.</p>
+                            <div class="compass-icon"><i class="fas fa-tree"></i></div>
+                        </div>
+                    </div>
+                    
+                    <div class="cliff-card south">
+                        <div class="card-image" style="background-image: url('images/cliff-south-canyon.jpg');"></div>
+                        <div class="card-content">
+                            <h4>Southern Canyon Cliff</h4>
+                            <p>Dramatic drops into deep canyons with spectacular stratified rock layers.</p>
+                            <div class="compass-icon">S</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cliff-card west">
+                        <div class="card-image" style="background-image: url('images/cliff-west-sea.jpg');"></div>
+                        <div class="card-content">
+                            <h4>Western Sea Cliff</h4>
+                            <p>Precipitous drops into the roaring ocean with endless horizon views.</p>
+                            <div class="compass-icon">W</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="geological-facts">
+            <div class="container">
+                <h3>Geological Features</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                        <h4>Rock Layers</h4>
+                        <p>Our cliffs showcase diverse sedimentary layers formed over millennia</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-water"></i></div>
+                        <h4>Erosion Patterns</h4>
+                        <p>Unique patterns carved by wind and water erosion</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                        <h4>Ecosystems</h4>
+                        <p>Distinct micro-ecosystems at different elevations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Explore More</h3>
+                <ul>
+                    <li><a href="geology.html">Geology</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                    <li><a href="safety.html">Safety</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-flickr"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Cliff Explorations</p>
+    </footer>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

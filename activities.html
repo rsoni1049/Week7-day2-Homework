@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Cliff Adventures</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .tdhighlight {
+            background-color: #d4edda !important;
+            font-weight: bold;
+        }
+        #activityModal .modal-body {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .selected-activity {
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Top Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Great Cliff</a>
+                <!-- Hamburger Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i> Menu
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                                <li><a class="dropdown-item" href="cliff.html">Cliffs</a></li>
+                                <li><a class="dropdown-item active" href="activities.html">Activities</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-layout">
+        <main class="main-content container mt-4">
+            <h1>Activities at the Cliffs</h1>
+            <p>
+                Discover the thrill of the great outdoors at Great Cliff. Whether you're seeking an adrenaline rush or a peaceful escape into nature, our wide range of activities is designed to suit all interests and skill levels.
+            </p>
+          
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Activity</th>
+                        <th>West Cliff</th>
+                        <th>North Cliff</th>
+                        <th>East Cliff</th>
+                        <th>South Cliff</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hiking</td>
+                        <td>College Hikes</td>
+                        <td>Family Fun</td>
+                        <td>Treasure Trails</td>
+                        <td>Canyon Explorer</td>
+                    </tr>
+                    <tr>
+                        <td>Kayak</td>
+                        <td>Western Kayak Meetup</td>
+                        <td class="text-muted">Not Available</td>
+                        <td>Youth Kayaking</td>
+                        <td>Kayak Down</td>
+                    </tr>
+                    <tr>
+                        <td>Skydiving</td>
+                        <td>Seaciff Diving</td>
+                        <td>Sky is the limit</td>
+                        <td class="text-muted">Not Available</td>
+                        <td>Sky Diving for Beginners</td>
+                    </tr>
+                    <tr>
+                        <td>Biking</td>
+                        <td>Bicycle for One</td>
+                        <td class="text-muted">Not Available</td>
+                        <td>Bike Meetup Group</td>
+                        <td class="text-muted">Not Available</td>
+                    </tr>
+                    <tr>
+                        <td>Camping</td>
+                        <td>Youth Camp</td>
+                        <td>Rent a Tent</td>
+                        <td>Campground Adventure</td>
+                        <td>Sunset Camping</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Selected Activities Modal -->
+            <div class="modal fade" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="activityModalLabel">My selected activities to enquire:</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="selectedActivitiesList">
+                            <!-- Selected activities will appear here -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back to Activities</button>
+                            <button type="button" class="btn btn-primary" id="enquireBtn">Get Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Input Modal -->
+            <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="emailModalLabel">Enter Your Email</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="email" class="form-control" id="userEmail" placeholder="johndoe@gmail.com">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="submitEmailBtn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Explore More</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="geology.html" class="text-light">Geology</a></li>
+                        <li><a href="photography.html" class="text-light">Photography</a></li>
+                        <li><a href="safety.html" class="text-light">Safety</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2023 GreatCliffs.com</p>
+                <small>Designed by Great Cliff's Team</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/activities.js">
+
+    </script>
+</body>
+</html>

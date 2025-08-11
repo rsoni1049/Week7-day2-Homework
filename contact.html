@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Cliff Adventures - Contact Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="/randomcodes.js"></script>
+</head>
+<body>
+    <!-- Sticky Top Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Great Cliff</a>
+                <!-- Hamburger Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i> Menu
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                                <li><a class="dropdown-item" href="cliff.html">Cliffs</a></li>
+                                <li><a class="dropdown-item" href="activities.html">Activities</a></li>
+                                <li><a class="dropdown-item active" href="contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout container my-5">
+        <main class="main-content">
+            <h1>Contacting Us</h1>
+            <p>
+                You can drop by the visitors information center at the cliff site that you plan on visiting. They are open 7 days a week from 8.00AM to 5.00PM. You can also contact us directly if you need additional information about the Cliffs, Hours of Operations, Facilities or questions about this site using one of the following:
+            </p>
+            
+            <div class="contact-info">
+                <p><strong>Phone:</strong> (800)GCLIFFS</p>
+                <p><strong>Email:</strong> info@greatcliffs.com</p>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2 class="form-title">Contact Form</h2>
+            <form class="contact-form" action="/contact" method="post">
+                <div class="form-group mb-3">
+                    <label for="fullname">Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" class="form-control" required>
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" class="form-control" required>
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" class="form-control">
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label>How should we contact you?</label>
+                    <div>
+                        <label class="me-3">
+                            <input type="radio" name="contact-method" value="email" checked>
+                            Email
+                        </label>
+                        <label>
+                            <input type="radio" name="contact-method" value="phone">
+                            Phone
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label for="cliff">Which Cliff are you inquiring?</label>
+                    <select id="cliff" name="cliff" class="form-select">
+                        <option value="west">West Cliff</option>
+                        <option value="north">North Cliff</option>
+                        <option value="east">East Cliff</option>
+                        <option value="south">South Cliff</option>
+                    </select>
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label for="hear-about">How did you hear about us:</label>
+                    <select id="hear-about" name="hear-about" class="form-select">
+                        <option value="">Select an option</option>
+                        <option value="friend">Friend/Family</option>
+                        <option value="internet">Internet Search</option>
+                        <option value="ad">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <!-- Random Codes Section -->
+<div class="form-group mb-3">
+    <label>Verification Code:</label>
+    <div class="verification-code">
+        <div id="codes" class="code-display"></div>
+        <input type="text" name="randomcode" id="randomcode" class="form-control" placeholder="Enter the code above" required>
+    </div>
+</div>
+                
+                <button type="submit" class="btn btn-primary">
+    <i class="fas fa-paper-plane me-2"></i> Send
+</button>
+
+            </form>
+        </main>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div>
+            <div class="social mb-3">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; Copyright 2023 :: GreatCliffs.com</p>
+            <p class="credits">Designed by Great Cliff's Team</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
